@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Summary</title>
+  </head>
+  <body>
+    <h1>Summary</h1>
+    <h2>Personal Info</h2>
+    <ul>
+      {% for info in personal_info %}
+        <li>First Name: {{ info.first_name }}</li>
+        <li>Last Name: {{ info.last_name }}</li>
+        <li>Email: {{ info.email }}</li>
+        <li>Phone: {{ info.phone }}</li>
+      {% endfor %}
+    </ul>
+    <h2>Education</h2>
+    <ul>
+      {% for edu in education %}
+        <li>Degree: {{ edu.degree }}</li>
+        <li>Institution: {{ edu.institution }}</li>
+        <li>Duration: {{ edu.duration }}</li>
+        <li>GPA: {{ edu.gpa }}</li>
+      {% endfor %}
+    </ul>
+    <h2>Skills</h2>
+    <ul>
+      {% for skill in skills %}
+        <li>Skill Name: {{ skill.skill_name }}</li>
+        <li>Level: {{ skill.level }}</li>
+      {% endfor %}
+    </ul>
+    <h2>Experience</h2>
+    <ul>
+      {% for exp in experiences %}
+        <li>Company: {{ exp.company }}</li>
+        <li>Position: {{ exp.position }}</li>
+        <li>Duration: {{ exp.duration }}</li>
+        <li>Description: {{ exp.description }}</li>
+      {% endfor %}
+    </ul>
+    <h2>Projects</h2>
+    <ul>
+      {% for proj in projects %}
+        <li>Project Name: {{ proj.project_name }}</li>
+        <li>Description: {{ proj.description }}</li>
+        <li>Link: {{ proj.link }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
